@@ -80,3 +80,16 @@ DELETE FROM student WHERE `student`.`id` = 99
 -- - projet : Ut delectus explicabo.
 -- Note : vous devez supprimez les relations avec les dépendances mais pas les dépendances.
 -- Autrement dit ne supprimez aucun student ni aucun tag.
+SELECT 
+FROM student
+WHERE project_id = 16 
+SET project_id = NULL
+
+SELECT
+FROM project_tag
+WHERE project_id = 16
+SET project_tag = NULL
+
+DELETE
+FROM project
+WHERE id = 16
